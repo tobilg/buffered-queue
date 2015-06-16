@@ -1,4 +1,4 @@
-# buffer-queue
+# buffered-queue
 
 A simple to use buffering queue as Node.js module (no dependencies), which flexibly buffers objects, strings, integers etc. until either a maximum size is reached, or an interval has come to an end.
 
