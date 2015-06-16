@@ -1,0 +1,45 @@
+{
+  "name": "buffered-queue",
+  "version": "0.1.0",
+  "description": "A simple to use buffering queue (no dependencies) which flexibly buffers objects, strings, integers etc. until either a maximum size is reached, or an interval has come to an end.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tobilg/buffered-queue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobilg/buffered-queue/issues"
+  },
+  "main": "./lib/BufferedQueue",
+  "keywords": [
+    "buffer",
+    "buffered",
+    "queue",
+    "recurring",
+    "interval",
+    "timeout",
+    "batch",
+    "simple",
+    "items",
+    "flexible",
+    "small",
+    "no dependencies"
+  ],
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "author": "TobiLG",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tobilg/buffered-queue/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/tobilg/buffered-queue",
+  "maintainers": [
+    {
+      "name": "TobiLG",
+      "email": "fb.tools.github@gmail.com"
+    }
+  ]
+}
