@@ -78,7 +78,7 @@ var q = new Queue('test', {
 Think about a use case where you receive input from a process, and want to log the results only after 3 seconds have passed, or 5 items have been added.  
 
 ```
-var Queue = require('buffer-queue');
+var Queue = require('buffered-queue');
 
 var q = new Queue('example', {
     size: 5,
