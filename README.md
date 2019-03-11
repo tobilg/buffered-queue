@@ -132,3 +132,7 @@ Queue (example): The timeout triggered a Queue flush! 2 items are in the Queue.
 MESSAGE 5
 MESSAGE 6
 ```
+
+## Testing
+
+`Jest` is used for testing. Just run `npm test`. 
