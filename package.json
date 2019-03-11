@@ -24,6 +24,9 @@
     "small",
     "no dependencies"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {},
   "engines": {
     "node": "*"
@@ -41,5 +44,11 @@
       "name": "TobiLG",
       "email": "fb.tools.github@gmail.com"
     }
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^24.3.1"
+  },
+  "jest": {
+    "roots": ["test"]
+  }
 }
