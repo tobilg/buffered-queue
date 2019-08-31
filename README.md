@@ -23,8 +23,9 @@ There are two optional parameters, the `name` of the queue and the configuration
 ```
 var q = new Queue('pageviews', {
     size: 3,               // The maximum size before the queue is flushed (default: 10)
-    flushTimeout: 1000,    // The timeout in milliseconds after the queue is flushed (default: 5000ms)
-    verbose: true         // Whether debug info should be logged to console.log or not (default: false)
+    flushTimeout: 1000,    // The timeout in milliseconds after the queue is flushed
+                           // (default: null, so there will be no recurring queue flush configured)
+    verbose: true          // Whether debug info should be logged to console.log or not (default: false)
 });
 ```
 
