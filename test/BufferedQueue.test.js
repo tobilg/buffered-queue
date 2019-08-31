@@ -19,25 +19,23 @@ describe('BufferedQueue', () => {
             const Queue = requireModule();
 
             const size = 5;
-            const flushTimeout = Infinity;
 
             const q = new Queue('example', {
                 size,
-                flushTimeout,
                 verbose: false
             });
 
-            const n_of_exceeding_items = 2; //random
+            q.on("flush", (data, name) => {
+                console.log(data)
+                expect(data.length).toEqual(size);
+                done()
+            });
+
+            const n_of_exceeding_items = 2;
 
             const items = Array
               .from({ length: size + n_of_exceeding_items})
-              .map((_, i) => i);
-            const expected = items.slice(0, size);
-
-            q.on("flush", (data, name) => {
-                expect(data).toEqual(expected);
-                done()
-            });
+              .map((_, i) => i);         
 
             items.forEach(item => q.add(item));
 
@@ -55,19 +53,14 @@ describe('BufferedQueue', () => {
                 verbose: false
             });
 
-            const items = [];
+            const items = [0, 1];
 
             q.on("flush", (data, name) => {
-                clearInterval(tid);
-                const expected = items;
-                expect(data).toEqual(expected);
-                done()
+                expect(data).toEqual(items);
+                done();
             });
 
-            const pushEvery = flushTimeout / 2;
-            const tid = setInterval(() => {
-                items.push(`item-${Date.now()}`);
-            }, pushEvery);
+            items.forEach(item => q.add(item));
 
         });
 
