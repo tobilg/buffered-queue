@@ -26,7 +26,6 @@ describe('BufferedQueue', () => {
             });
 
             q.on("flush", (data, name) => {
-                console.log(data)
                 expect(data.length).toEqual(size);
                 done()
             });
@@ -63,7 +62,6 @@ describe('BufferedQueue', () => {
             items.forEach(item => q.add(item));
 
         });
-
 
     });
 

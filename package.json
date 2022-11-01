@@ -1,6 +1,6 @@
 {
   "name": "buffered-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple to use buffering queue (no dependencies) which flexibly buffers objects, strings, integers etc. until either a maximum size is reached, or an interval has come to an end.",
   "repository": {
     "type": "git",
@@ -46,7 +46,7 @@
     }
   ],
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^29.2.2"
   },
   "jest": {
     "roots": [
